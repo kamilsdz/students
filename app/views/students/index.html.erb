@@ -1,0 +1,20 @@
+<h1>Lista studentów:</h1>
+<%= link_to 'Dodaj studenta >', new_student_path %>
+<br/><br/>
+<table>
+  <tr>
+    <td>Student</td>
+    <td>Wynik</td>
+    <td>Podgląd:</td>
+  </tr>
+
+  <% @students.each do |student| %>
+    <tr>
+      <td><%= student.name %></td>
+      <td><%= student.score %></td>
+      <td><%= link_to 'Przejdź do profilu >', student_path(student) %></td>
+    </tr>
+  <% end %>
+</table>
+<br/><br/>
+<%= link_to 'Powrót do listy zakwalifikowanych >', board_index_path %>

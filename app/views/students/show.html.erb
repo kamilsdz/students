@@ -1,0 +1,17 @@
+<h1>Podgląd studenta:</h1>
+<table>
+  <tr><td>
+    <strong>Student:</strong>
+  </td>
+  <td>
+    <strong>Wynik:</strong>
+  </td></tr>
+  <tr><td>
+    <%= @student.name %>
+  </td>
+  <td>
+    <%= @student.score %>
+  </td></tr>
+</table>
+<br/>
+<%= link_to 'Powrót do listy studentów >', students_path %>

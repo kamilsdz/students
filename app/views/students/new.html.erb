@@ -1,0 +1,18 @@
+<h1>Dodaj studenta do bazy:</h1>
+<%= form_with scope: :student, url: students_path, local: true do |form| %>
+<table>
+  <tr><td>
+    <%= form.label 'Imię studenta?' %><br>
+    <%= form.text_field :name %>
+  <td/>
+  <td>
+    <%= form.label 'Wynik studenta?' %><br>
+    <%= form.text_area :score %>
+  </td>
+  <td>
+    <%= form.submit 'Prześlij do dziekanatu' %>
+  </td></tr>
+</table>
+<% end %>
+<br/><br/>
+<%= link_to 'Wyjdź bez zapisu >', students_path %>
